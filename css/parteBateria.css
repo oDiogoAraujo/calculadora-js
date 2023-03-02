@@ -1,0 +1,24 @@
+.parteBateria {
+    display: flex;
+    width: 10rem;
+    background-color: #303030;
+    box-shadow: 0px -3px 2px 1px #303030;
+    border-radius: 25px;
+    padding: .5rem;
+}
+
+.calculadoraBateria{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 2px;
+
+    background-color: var(--cor-bateria);
+}
+
+.calculadoraBateria:first-child{
+    border-radius: 25% 0 0 25%;
+}
+
+.calculadoraBateria:last-child{
+    border-radius: 0 25% 25% 0;
+}

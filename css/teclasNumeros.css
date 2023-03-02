@@ -1,0 +1,95 @@
+.tecla,
+.teclaAmarela,
+.teclaCE{
+    cursor: pointer;
+    user-select: none;
+}
+
+.teclaOperador{
+    font-weight: bold;
+}
+
+.tecla {
+    background-color: var(--preto-btn);
+    padding: 0.45rem;
+    border-radius: .35rem;
+    font-size: 1.25rem;
+
+    -webkit-box-shadow: 0px 3px 0px 3px var(--pretoSombra);
+    -moz-box-shadow: 0px 3px 0px 3px var(--pretoSombra);
+    box-shadow: 0px 3px 0px 3px var(--pretoSombra);
+    transition: all ease 0.1s;
+}
+
+.tecla:active {
+    -webkit-box-shadow: 0px 0px 0px 0px var(--pretoSombra);
+    -moz-box-shadow: 0px 0px 0px 0px var(--pretoSombra);
+    box-shadow: 0px 0px 0px 0px var(--pretoSombra);
+}
+
+/* --------------------------------------------------- */
+
+.teclaAmarela {
+    background-color: var(--amarelo-btn);
+    border-radius: 1rem;
+    height: 15px;
+    align-self: end;
+    
+    -webkit-box-shadow: 0px 2px 0px 2px var(--amareloSombra);
+    -moz-box-shadow: 0px 2px 0px 2px var(--amareloSombra);
+    box-shadow:0px 2px 0px 2px var(--amareloSombra);
+    transition: all ease-in-out 0.1s;
+}
+
+.teclaAmarela:active {
+    -webkit-box-shadow: 0px 0px 0px 0px var(--amareloSombra);
+    -moz-box-shadow: 0px 0px 0px 0px var(--amareloSombra);
+    box-shadow:0px 0px 0px 0px var(--amareloSombra);
+}
+
+/* --------------------------------------------------- */
+
+.teclaCE,
+#soma {
+    background-color: var(--verde-btn);
+
+    -webkit-box-shadow: 0px 5px 0px 3px var(--verdeSombra);
+    -moz-box-shadow: 0px 5px 0px 3px var(--verdeSombra);
+    box-shadow: 0px 5px 0px 3px var(--verdeSombra);
+    transition: all ease 0.1s;
+}
+
+.teclaCE:active,
+#soma:active {
+    -webkit-box-shadow: 0px 0px 0px 0px var(--verdeSombra);
+    -moz-box-shadow: 0px 0px 0px 0px var(--verdeSombra);
+    box-shadow: 0px 0px 0px 0px var(--verdeSombra);
+}
+
+.teclaCE {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    margin: 0 auto;
+    font-size: 1rem;
+    position: relative;
+
+}
+
+.teclaCE::before {
+    content: 'CE';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#soma {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 3em;
+    box-sizing: border-box;
+}

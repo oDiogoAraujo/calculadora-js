@@ -1,0 +1,105 @@
+@import url(./teclasNumeros.css);
+@import url(./parteBateria.css);
+
+:root {
+    --preto-corpo: #414141;
+    --amarelo-btn: #f7e39c;
+    --verde-btn: #59959f;
+    --branco-btn: #ffffff;
+    --fundo-display: #a5b29e;
+    --numero-display: #232325;
+    --cor-bateria: #554b4a;
+    --preto-btn: #5a5a5c;
+    --pretoSombra: #272727;
+    --verdeSombra: #003130;
+    --amareloSombra: #8a6930;
+
+
+    --fonte-display: 'digital-clock-font', sans-serif;
+    --fonte-teclas: 'Orbitron', sans-serif;
+
+}
+
+@font-face {
+    font-family: 'digital-clock-font';
+    src: url('../fonte/DS-DIGI.TTF');
+}
+
+/* -------------------------------------------------------- */
+
+body {
+    background-color: #003130;
+    color: white;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculadoraCorpo span {
+    display: block;
+}
+
+.calculadoraCorpo {
+    min-width: 400px;
+    width: 400px;
+    background-color: var(--preto-corpo);
+    padding: 2rem;
+    padding-top: 3rem;
+    border-radius: 3rem 3rem 1.5rem 1.5rem;
+
+    /* -webkit-box-shadow: -8px 10px 0px 3px var(--pretoSombra);
+    -moz-box-shadow: -8px 10px 0px 3px var(--pretoSombra); */
+    box-shadow: -15px 25px 0px 3px var(--pretoSombra);
+}
+
+.parteVisor {
+    margin-top: 3rem;
+    width: 100%;
+    border-radius: 1rem;
+
+    -webkit-box-shadow: 0px -5px 3px 15px #303030;
+    -moz-box-shadow: 0px -5px 3px 15px #303030;
+    box-shadow: 0px -5px 3px 15px #303030;
+}
+
+.visorSuperior,
+.visorInferior {
+    max-width: 400px;
+    background-color: var(--fundo-display);
+    color: var(--numero-display);
+    font-weight: bold;
+    text-align: end;
+    word-break: break-all;
+    font-size: 2.2em;
+    padding: 0.5rem .5em;
+    height: 3rem;
+    letter-spacing: 2px;
+
+    font-family: var(--fonte-display);
+}
+
+.visorInferior {
+    border-radius: 0 0 1rem 1rem;
+    padding-top: 2rem;
+}
+
+.visorSuperior {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.calculadoraTeclas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 15px;
+    align-content: center;
+    font-family: var(--fonte-teclas);
+    align-items: center;
+
+    margin-top: 2rem;
+}
+
+#soma {
+    grid-row: span 2;
+}
